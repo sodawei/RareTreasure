@@ -1,0 +1,806 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/all.css">
+
+    <!-- jQy -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="js/Favrnoword.js"></script>
+
+    <!-- google icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />    
+    
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+</head>
+<body>
+
+
+  <div class="container">
+  
+    <!--導覽列 -->
+<nav class="navbar navbar-expand-lg navbar-sm fixed-top">
+<div class="container-fluid">
+  <a class="navbar-brand" href="./index.html">Rare Treasure</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+    <span class="material-symbols-outlined">menu</span>
+  </button>
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Rare Treasure</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">會員登入</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./cart.html">購物車</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            熱賣單品
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</div>
+</nav>
+
+
+<div class="container my-5">
+    <!--carousel照片列 -->  
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+<div class="carousel-inner">
+  <div class="carousel-item active">
+    <img src="https://images.unsplash.com/photo-1552334543-63c1f649eece?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80" class="d-block w-100 rounded" alt="...">
+  </div>
+  <div class="carousel-item">
+    <img src="https://images.unsplash.com/photo-1531995811006-35cb42e1a022?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80" class="d-block w-100 rounded" alt="...">
+  </div>
+  <div class="carousel-item">
+    <img src="https://images.unsplash.com/photo-1547738238-5ddb16bef15f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80" class="d-block w-100 rounded" alt="...">
+  </div>
+  <div class="carousel-item">
+    <img src="https://images.unsplash.com/photo-1633555234296-657a18d8b81a?auto=format&fit=crop&q=80&w=3474&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100 rounded" alt="...">
+  </div>
+</div>
+
+
+
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</button>
+</div>
+
+
+</div>
+
+    <!--購物須知 -->  
+    <div class="p-md-5 py-5 m-md-5">
+      <div class="container">
+      <h4 class="display-8 text-center mb-4">
+      購物須知
+      </p>
+      </h4>
+      
+      <div class="row g-4">
+          <!--stp 訂單流程 --> 
+        <div class="col mb-4">
+          <div class="card row g-0 flex-row">
+             <div class="col">
+               <div class="card-body">
+                 <p class="stp-text-focous">1.確認購買清單 Check Order</p> 
+
+               </div>
+             
+             </div>
+
+             <div class="col">
+              <div class="card-body ">
+                <p class="stp-text">2. 填寫運送資料 White Address </p>
+              </div>
+            
+            </div>
+
+            <div class="col">
+              <div class="card-body ">
+                <p class="stp-text">3. 購物完成 Shopping completed </p>
+              </div>
+            
+            </div>
+      
+          </div>
+        </div>
+
+
+
+        <div class="row ">
+        <div class="col mb-4">
+
+          <div class="row">
+
+ <!--商品NO1 -->   
+            
+          <!--lg顯示表格 -->              
+            <div class="col-12">
+                    
+          <!--stp 訂單細項 --> 
+          <table class="table">
+            <thead>
+    <tr>
+      <th scope="col-2">商品資訊</th>
+      <th scope="col"></th>
+      <th class="d-none d-lg-table-cell" scope="col">數量</th>
+      <th class="d-none d-lg-table-cell" scope="col">單價</th>
+      <th class="d-none d-lg-table-cell" scope="col">折扣價</th>
+      <th class="d-none d-lg-table-cell" scope="col">小計</th>
+      <th class="d-none d-lg-table-cell" scope="col">收藏</th>
+      <th class="d-none d-lg-table-cell" scope="col">刪除</th>
+    </tr>
+            </thead>
+
+            <tbody>
+       <!--商品資訊 --> 
+    <tr>
+      <th scope="row">
+           <!-- 購物商品圖-->
+             <div class="col">
+               <img  class="card-img-top object-fit-cover img-fluid set-size-order" src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3435&q=80" alt="...">
+        
+             </div>
+      
+      </th>
+      <td>[預購][純銀]跳舞的蝴蝶結耳環</td>
+      <td class="d-none d-lg-table-cell">
+           <!-- 下拉數量選單 -->
+              <div class="btn-group">
+               <button class="btn btn-outline-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 1
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">1</a></li>
+                      <li><a class="dropdown-item" href="#">2</a></li>
+                      <li><a class="dropdown-item" href="#">3</a></li>
+                    </ul>
+              </div>
+      </td>
+      <td class="d-none d-lg-table-cell">450</td>
+      <td class="d-none d-lg-table-cell" >450</td>
+      <td class="d-none d-lg-table-cell" >450</td>
+      <td class="d-none d-lg-table-cell" >  
+            <!-- icon 愛心 -->
+        <button id="swapLove" class="btn btn-light showLove">
+        <span class="bi bi-heart"></span>
+        </button>
+      </td>
+      <td class="d-none d-lg-table-cell">
+            <!-- icon 關閉 -->
+        <button class="btn btn-light">
+        <span class="bi bi-x-lg"></span>
+        </button>
+      </td>
+
+
+    </tr>
+    
+
+
+            </tbody>
+
+          </table>    
+            </div>
+
+          <!--mobile顯示表格 -->   
+            <div class="col-12 d-block d-md-block d-lg-none">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">數量</th>
+                    <th scope="col">單價</th>
+                    <th scope="col">折扣價</th>
+                    <th scope="col">小計</th>
+                    <th scope="col">收藏</th>
+                    <th scope="col">刪除</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">          
+                       <!-- 下拉數量選單 -->
+                      <div class="btn-group">
+                       <button class="btn btn-outline-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                         1
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">1</a></li>
+                              <li><a class="dropdown-item" href="#">2</a></li>
+                              <li><a class="dropdown-item" href="#">3</a></li>
+                            </ul>
+                      </div>
+                    </th>
+                      <td>450</td>
+                      <td>450</td>
+                      <td>450</td>
+                      <td>  
+                            <!-- icon 愛心 -->
+                           <button id="swapLove" class="btn btn-light showLove">
+                           <span class="bi bi-heart"></span>
+                           </button>
+                      </td>
+                      <td>
+                            <!-- icon 關閉 -->
+                          <button class="btn btn-light">
+                          <span class="bi bi-x-lg"></span>
+                          </button>
+                      </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+         </div>
+
+          <!--mobile顯示灰分隔線 -->   
+          <hr class="divider" style="border-color:black; border-width:1px">
+
+
+<!--商品NO2 -->    
+
+          <!--lg顯示表格 -->              
+          <div class="col-12">
+                    
+            <!--stp 訂單細項 --> 
+            <table class="table">
+              <thead>
+      <tr>
+        <th scope="col-2"></th>
+        <th scope="col"></th>
+        <th class="d-none d-lg-table-cell" scope="col">數量</th>
+        <th class="d-none d-lg-table-cell" scope="col">單價</th>
+        <th class="d-none d-lg-table-cell" scope="col">折扣價</th>
+        <th class="d-none d-lg-table-cell" scope="col">小計</th>
+        <th class="d-none d-lg-table-cell" scope="col">收藏</th>
+        <th class="d-none d-lg-table-cell" scope="col">刪除</th>
+      </tr>
+              </thead>
+  
+              <tbody>
+         <!--商品資訊 --> 
+      <tr>
+        <th scope="row">
+             <!-- 購物商品圖-->
+               <div class="col">
+                 <img  class="card-img-top object-fit-cover img-fluid set-size-order" src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3435&q=80" alt="...">
+          
+               </div>
+        
+        </th>
+        <td>[預購][純銀]跳舞的蝴蝶結耳環</td>
+        <td class="d-none d-lg-table-cell">
+             <!-- 下拉數量選單 -->
+                <div class="btn-group">
+                 <button class="btn btn-outline-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   1
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">1</a></li>
+                        <li><a class="dropdown-item" href="#">2</a></li>
+                        <li><a class="dropdown-item" href="#">3</a></li>
+                      </ul>
+                </div>
+        </td>
+        <td class="d-none d-lg-table-cell">450</td>
+        <td class="d-none d-lg-table-cell" >450</td>
+        <td class="d-none d-lg-table-cell" >450</td>
+        <td class="d-none d-lg-table-cell" >  
+              <!-- icon 愛心 -->
+          <button id="swapLove" class="btn btn-light showLove">
+          <span class="bi bi-heart"></span>
+          </button>
+        </td>
+        <td class="d-none d-lg-table-cell">
+              <!-- icon 關閉 -->
+          <button class="btn btn-light">
+          <span class="bi bi-x-lg"></span>
+          </button>
+        </td>
+  
+  
+      </tr>
+      
+  
+  
+              </tbody>
+  
+            </table>    
+              </div>
+  
+            <!--mobile顯示表格 -->   
+              <div class="col-12 d-block d-md-block d-lg-none">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">數量</th>
+                      <th scope="col">單價</th>
+                      <th scope="col">折扣價</th>
+                      <th scope="col">小計</th>
+                      <th scope="col">收藏</th>
+                      <th scope="col">刪除</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">          
+                         <!-- 下拉數量選單 -->
+                        <div class="btn-group">
+                         <button class="btn btn-outline-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                           1
+                              </button>
+                              <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">1</a></li>
+                                <li><a class="dropdown-item" href="#">2</a></li>
+                                <li><a class="dropdown-item" href="#">3</a></li>
+                              </ul>
+                        </div>
+                      </th>
+                        <td>450</td>
+                        <td>450</td>
+                        <td>450</td>
+                        <td>  
+                              <!-- icon 愛心 -->
+                             <button id="swapLove" class="btn btn-light showLove">
+                             <span class="bi bi-heart"></span>
+                             </button>
+                        </td>
+                        <td>
+                              <!-- icon 關閉 -->
+                            <button class="btn btn-light">
+                            <span class="bi bi-x-lg"></span>
+                            </button>
+                        </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+           </div>
+  
+            <!--mobile顯示灰分隔線 -->   
+            <hr class="divider" style="border-color:black; border-width:1px">
+
+
+<!--商品NO3 -->    
+
+          <!--lg顯示表格 -->              
+          <div class="col-12">
+                    
+            <!--stp 訂單細項 --> 
+            <table class="table">
+              <thead>
+      <tr>
+        <th scope="col-2"></th>
+        <th scope="col"></th>
+        <th class="d-none d-lg-table-cell" scope="col">數量</th>
+        <th class="d-none d-lg-table-cell" scope="col">單價</th>
+        <th class="d-none d-lg-table-cell" scope="col">折扣價</th>
+        <th class="d-none d-lg-table-cell" scope="col">小計</th>
+        <th class="d-none d-lg-table-cell" scope="col">收藏</th>
+        <th class="d-none d-lg-table-cell" scope="col">刪除</th>
+      </tr>
+              </thead>
+  
+              <tbody>
+         <!--商品資訊 --> 
+      <tr>
+        <th scope="row">
+             <!-- 購物商品圖-->
+               <div class="col">
+                 <img  class="card-img-top object-fit-cover img-fluid set-size-order" src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3435&q=80" alt="...">
+          
+               </div>
+        
+        </th>
+        <td>[預購][純銀]跳舞的蝴蝶結耳環</td>
+        <td class="d-none d-lg-table-cell">
+             <!-- 下拉數量選單 -->
+                <div class="btn-group">
+                 <button class="btn btn-outline-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   1
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">1</a></li>
+                        <li><a class="dropdown-item" href="#">2</a></li>
+                        <li><a class="dropdown-item" href="#">3</a></li>
+                      </ul>
+                </div>
+        </td>
+        <td class="d-none d-lg-table-cell">450</td>
+        <td class="d-none d-lg-table-cell" >450</td>
+        <td class="d-none d-lg-table-cell" >450</td>
+        <td class="d-none d-lg-table-cell" >  
+              <!-- icon 愛心 -->
+          <button id="swapLove" class="btn btn-light showLove">
+          <span class="bi bi-heart"></span>
+          </button>
+        </td>
+        <td class="d-none d-lg-table-cell">
+              <!-- icon 關閉 -->
+          <button class="btn btn-light">
+          <span class="bi bi-x-lg"></span>
+          </button>
+        </td>
+  
+  
+      </tr>
+      
+  
+  
+              </tbody>
+  
+            </table>    
+              </div>
+  
+            <!--mobile顯示表格 -->   
+              <div class="col-12 d-block d-md-block d-lg-none">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">數量</th>
+                      <th scope="col">單價</th>
+                      <th scope="col">折扣價</th>
+                      <th scope="col">小計</th>
+                      <th scope="col">收藏</th>
+                      <th scope="col">刪除</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">          
+                         <!-- 下拉數量選單 -->
+                        <div class="btn-group">
+                         <button class="btn btn-outline-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                           1
+                              </button>
+                              <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">1</a></li>
+                                <li><a class="dropdown-item" href="#">2</a></li>
+                                <li><a class="dropdown-item" href="#">3</a></li>
+                              </ul>
+                        </div>
+                      </th>
+                        <td>450</td>
+                        <td>450</td>
+                        <td>450</td>
+                        <td>  
+                              <!-- icon 愛心 -->
+                             <button id="swapLove" class="btn btn-light showLove">
+                             <span class="bi bi-heart"></span>
+                             </button>
+                        </td>
+                        <td>
+                              <!-- icon 關閉 -->
+                            <button class="btn btn-light">
+                            <span class="bi bi-x-lg"></span>
+                            </button>
+                        </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+           </div>
+  
+            <!--mobile顯示灰分隔線 -->   
+            <hr class="divider" style="border-color:black; border-width:1px">
+
+
+        </div>
+
+
+<!--商品NO4 -->    
+
+          <!--lg顯示表格 -->              
+          <div class="col-12">
+                    
+            <!--stp 訂單細項 --> 
+            <table class="table">
+              <thead>
+      <tr>
+        <th scope="col-2"></th>
+        <th scope="col"></th>
+        <th class="d-none d-lg-table-cell" scope="col">數量</th>
+        <th class="d-none d-lg-table-cell" scope="col">單價</th>
+        <th class="d-none d-lg-table-cell" scope="col">折扣價</th>
+        <th class="d-none d-lg-table-cell" scope="col">小計</th>
+        <th class="d-none d-lg-table-cell" scope="col">收藏</th>
+        <th class="d-none d-lg-table-cell" scope="col">刪除</th>
+      </tr>
+              </thead>
+  
+              <tbody>
+         <!--商品資訊 --> 
+      <tr>
+        <th scope="row">
+             <!-- 購物商品圖-->
+               <div class="col">
+                 <img  class="card-img-top object-fit-cover img-fluid set-size-order" src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3435&q=80" alt="...">
+          
+               </div>
+        
+        </th>
+        <td>[預購][純銀]跳舞的蝴蝶結耳環</td>
+        <td class="d-none d-lg-table-cell">
+             <!-- 下拉數量選單 -->
+                <div class="btn-group">
+                 <button class="btn btn-outline-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">1</a></li>
+                        <li><a class="dropdown-item" href="#">2</a></li>
+                        <li><a class="dropdown-item" href="#">3</a></li>
+                      </ul>
+                </div>
+        </td>
+        <td class="d-none d-lg-table-cell">450</td>
+        <td class="d-none d-lg-table-cell" >450</td>
+        <td class="d-none d-lg-table-cell" >450</td>
+        <td class="d-none d-lg-table-cell" >  
+              <!-- icon 愛心 -->
+          <button id="swapLove" class="btn btn-light showLove">
+          <span class="bi bi-heart"></span>
+          </button>
+        </td>
+        <td class="d-none d-lg-table-cell">
+              <!-- icon 關閉 -->
+          <button class="btn btn-light">
+          <span class="bi bi-x-lg"></span>
+          </button>
+        </td>
+  
+  
+      </tr>
+      
+  
+  
+              </tbody>
+  
+            </table>    
+              </div>
+  
+            <!--mobile顯示表格 -->   
+              <div class="col-12 d-block d-md-block d-lg-none">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">數量</th>
+                      <th scope="col">單價</th>
+                      <th scope="col">折扣價</th>
+                      <th scope="col">小計</th>
+                      <th scope="col">收藏</th>
+                      <th scope="col">刪除</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">          
+                         <!-- 下拉數量選單 -->
+                        <div class="btn-group">
+                         <button class="btn btn-outline-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                           1
+                              </button>
+                              <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">1</a></li>
+                                <li><a class="dropdown-item" href="#">2</a></li>
+                                <li><a class="dropdown-item" href="#">3</a></li>
+                              </ul>
+                        </div>
+                      </th>
+                        <td>450</td>
+                        <td>450</td>
+                        <td>450</td>
+                        <td>  
+                              <!-- icon 愛心 -->
+                             <button id="swapLove" class="btn btn-light showLove">
+                             <span class="bi bi-heart"></span>
+                             </button>
+                        </td>
+                        <td>
+                              <!-- icon 關閉 -->
+                            <button class="btn btn-light">
+                            <span class="bi bi-x-lg"></span>
+                            </button>
+                        </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+           </div>
+  
+            <!--mobile顯示灰分隔線 -->   
+            <hr class="divider" style="border-color:black; border-width:1px">
+
+
+       
+            <!--訂單細項運送跟付費 -->         
+            <div class="container gx-5">
+              <div class="row mb-5">
+              <div class="col-xl-6 my-3 ">
+                  <form>
+                 <div class="row mb-3">
+                <legend>Disabled fieldset example</legend>
+                 <!--運送區域 -->
+                <div class="row">
+                  <label class="col-form-label col-sm-2 pt-0">運送區域</label>
+                  <div class="col-sm-10">
+                  <select class="form-select">
+                    <option>台灣本島及離島</option>
+                    <option>香港</option>
+                  </select> 
+                      </div>
+                </div>
+                 </div>
+                    
+                    <fieldset class="row mb-3">
+                <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+                          <div class="col-sm-10">
+                                <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                <label class="form-check-label" for="gridCheck1">信用卡線上刷卡</label>
+                                </div>
+                                <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                <label class="form-check-label" for="gridCheck1">貨到付款(超商)</label>
+                                </div>
+                                <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                <label class="form-check-label" for="gridCheck1">LINE Pay(可用POINT折抵)</label>
+                                </div>
+                                <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                <label class="form-check-label" for="gridCheck1">貨到付款(宅配)</label>
+                                </div>
+                    </fieldset>
+                    <fieldset class="row mb-3">
+                <legend class="col-form-label col-sm-2 pt-0">運送方式</legend>
+                          <div class="col-sm-10">
+                                <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                <label class="form-check-label" for="gridCheck1">超商取貨(滿$1000免運)</label>
+                                </div>
+                                <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                <label class="form-check-label" for="gridCheck1">宅配(滿$1000免運)</label>
+                                </div>
+                                <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                <label class="form-check-label" for="gridCheck1">超商取貨(滿$1000免運)</label>
+                                </div>
+                    </fieldset>
+                       <!--顯示領貨住址 -->     
+                        <div class="row mt-4 mb-4">
+                              <div class="col">
+                                <p>110 忠孝門市 臺北市信義區中坡南路4382號</p>
+                      <button type="button" class="btn btn-outline-primary">選擇門市</button>
+                              </div>
+                        </div>
+            </form>
+                  </div>
+            
+            
+                
+                <!--訂單金額統計 -->
+                    
+              <div class="col-auto mt-3">
+                <p class="lh-sm">您已經到達NT$1000免運門檻了</p>
+                &nbsp
+                <div class="row">
+                  <div class="col lh-sm">
+                    <p>總金額</p>
+                    <p>加購價</p>
+                    <p>運費</p>
+                    <p>購物金</p>
+                    <p>折價卷</p>
+                    &nbsp
+                    <p>應付金額</p>
+                  </div>
+                  <div class="col lh-sm" style="display:block; text-align:right;">
+                    <p>NT$1,520</p>
+                    <p>0</p>
+                    <p>0</p>
+                    <p>NT$0</p>
+                    <p>NT$0</p> 
+                    &nbsp
+                    <p>NT$1,520</p>
+                  </div>
+                  </div>
+              </div>  
+                
+                <!--藍色結帳按鈕 -->   
+              <div class="col-12">
+                          <div class="d-grid gap-2 col-lg-6 ms-lg-4 mt-4 d-md-flex">
+                      <button type="submit" class="btn btn-primary">&emsp;回購物頁&emsp;</button>
+                      <button type="submit" class="btn btn-primary">&emsp;送出訂單&emsp;</button>
+                      </div>
+              </div>  
+                    
+                    
+                    
+              </div>
+              </div>
+       
+       
+       
+       
+       
+          
+          
+          
+                
+
+
+
+
+          </div>
+
+
+ </div>
+
+      
+
+
+
+
+
+
+
+    <!--card footer -->  
+      <footer class="bg p-5">
+        <div class="container">
+        <ul class="list-unstyled d-flex d-md-flex justify-content-center text-center">
+        <li><a class="nav-link link-light text-link" href="#">關於品牌</a></li>
+        <li><a class="nav-link link-light text-link" test-linkhref="#">購物須知</a></li>
+        <li><a class="nav-link link-light text-link" href="#">退貨流程</a></li>
+        <li><a class="nav-link link-light text-link" href="#">版權聲明</a></li>
+        <li><a class="nav-link link-light text-link" href="#">聯絡客服</a></li>
+        
+        </ul>
+        </div>
+        
+        </footer>
+
+
+
+
+</body>
+
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</html>

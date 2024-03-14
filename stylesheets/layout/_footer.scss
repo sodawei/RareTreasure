@@ -1,0 +1,68 @@
+//變數
+$brand-color: #a08e6d;
+$similar-color:#805403;
+$font-color:#fff;
+$bl-color:black;
+$font-l:24px;
+$font-m:18px;
+$font-s:14px;
+
+
+
+/*ＲＷＤ*/
+@mixin web{
+  @media (min-width: 769px) and (max-width: 1920px) {
+      @content
+  }
+}
+
+@mixin pad{
+  @media (min-width: 576px) and (max-width: 768px) {
+      @content
+  }
+}
+
+
+@mixin phone{
+  @media (min-width: 375px) and (max-width: 575px) {
+      @content
+  }
+}
+
+
+
+/*顏色*/  
+  .bg{
+    background-color: $brand-color; 
+  }
+
+
+
+/*斷點*/
+
+.text-link{
+   @include pad(){
+    
+    width: 100%;
+    font-size: $font-m;
+            }
+
+   @include phone(){
+    
+    width: 60px;
+    font-size: $font-s;
+            }
+
+ }
+
+ .nav-link{
+  @include pad(){
+    padding: 0;
+            }
+ }
+
+  li{
+  @include pad(){
+    margin: 0.3rem
+            }
+ }

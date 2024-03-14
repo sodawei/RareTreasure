@@ -1,0 +1,100 @@
+ 
+$new-color: #ff3ac4;
+
+.btn-custom-new{
+   @include button-variant($new-color,$new-color);
+}
+
+ .btn-outline-new{
+   @include button-outline-variant($new-color);
+}
+
+
+$brand-color: #a08e6d;
+
+
+.highlight{
+   width: 80%;
+   height: 5px;
+   background-color: $brand-color;
+}
+
+.stp-text-focous{
+   margin-bottom:0;
+   border-bottom: 4px solid $brand-color;
+}
+
+.stp-text{
+   margin-bottom:0;
+   color: rgba(189, 189, 189, 1);
+}
+
+
+.dropdown-menu {
+   min-width: 0rem;
+}
+
+
+td{
+   vertical-align:middle;
+}
+
+/*RWD大小*/
+
+/*結帳訂單商品圖片*/
+
+.set-size-order{
+   @include web(){
+
+      height:200px;
+              }
+  
+    @include pad(){
+      
+      height:200px;
+              }
+  
+    
+     @include phone(){
+      
+      height:120px;
+               }
+ 
+ 
+ }
+
+/*mobile顯示灰分隔線*/
+
+.table{
+   @include web(){
+
+             }
+ 
+   @include pad(){
+      --bs-table-border-color:white;  
+             }
+ 
+   
+   @include phone(){
+
+      --bs-table-border-color:white;  
+              }
+ 
+ }
+
+
+ .divider{
+   @include web(){
+    display: none;
+             }
+ 
+   @include pad(){
+  
+             }
+ 
+   
+   @include phone(){
+    display:block;
+              }
+ 
+ }

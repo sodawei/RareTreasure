@@ -1,0 +1,10 @@
+ 
+$new-color: #ff3ac4;
+
+.btn-custom-new{
+   @include button-variant($new-color,$new-color);
+}
+
+ .btn-outline-new{
+   @include button-outline-variant($new-color);
+}

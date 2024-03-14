@@ -1,0 +1,78 @@
+h6{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-family: 'Noto Serif TC', serif;
+    font-family: 'RocknRoll One', sans-serif;
+    margin-top: 10px;
+    }
+    
+    
+    .marquee{
+      background:#a08e6d;
+    }
+ 
+       
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+    }
+    
+    .marquee-content {
+      display: inline-block;
+      white-space: nowrap;
+      animation: marquee 10s linear infinite;
+    }
+    
+    .marquee-content2 {
+      display: inline-block;
+      white-space: nowrap;
+      animation: marquee2 10s linear infinite;
+    }
+    .marquee-content3 {
+      display: inline-block;
+      white-space: nowrap;
+      animation: marquee2 10s linear infinite;
+    }
+    
+    .marquee-content4 {
+      display: inline-block;
+      white-space: nowrap;
+      animation: marquee2 10s linear infinite;
+    }
+    
+    
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    
+    @keyframes marquee2 {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    @keyframes marquee3 {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    
+    @keyframes marquee4 {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    

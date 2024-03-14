@@ -1,0 +1,494 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/all.css">
+
+    <!-- jQy -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="js/Favr.js"></script>
+
+    <!--商品計數按鈕 -->
+    <script src="https://unpkg.com/@erwinstone/input-touchspin@1.0.3/dist/input-touchspin.min.js"></script>
+    <!-- google icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />    
+
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    
+
+</head>
+<body>
+
+
+<div class="container">
+  
+    <!--導覽列 -->
+<nav class="navbar navbar-expand-lg navbar-sm fixed-top">
+<div class="container-fluid">
+  <a class="navbar-brand" href="./index.html">Rare Treasure</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+    <span class="material-symbols-outlined">menu</span>
+  </button>
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Rare Treasure</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">會員登入</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./cart.html">購物車</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            熱賣單品
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</div>
+</nav>
+
+    <!--輪播圖 -->
+<div class="container my-5">
+     <div class="row">
+
+           <div class="col-md-8">
+
+                <!--商品說明圖 -->
+                <div class="d-none d-md-block">
+                    <img  class="rounded img-fluid mb-5" src="https://plus.unsplash.com/premium_photo-1671641737553-3d669dc1f927?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mzh8QW8xN1oxVF9tNnN8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" style="width: 600px;"  alt="#">
+                 
+                    <img  class="rounded img-fluid mb-5" src="https://plus.unsplash.com/premium_photo-1671641737519-841d15b5211f?auto=format&fit=crop&q=80&w=2553&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="width: 600px;"  alt="#">
+
+                    <img  class="rounded img-fluid mb-5" src="https://t0.gstatic.com/images?q=tbn:ANd9GcQQ9cTw_J_MjCGJu094x71cilfepX5V9ui1Cm_5fKg6Qy5TTAgP" style="width: 600px;"  alt="#">
+        
+                </div>
+
+                <div class="d-block d-md-none ">
+                  <!--輪播商品說明圖 -->
+                  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img  class="img-fluid w-100" src="https://plus.unsplash.com/premium_photo-1671641737553-3d669dc1f927?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mzh8QW8xN1oxVF9tNnN8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img  class="img-fluid  w-100" src="https://plus.unsplash.com/premium_photo-1671641737519-841d15b5211f?auto=format&fit=crop&q=80&w=2553&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img  class="img-fluid  w-100" src="https://t0.gstatic.com/images?q=tbn:ANd9GcQQ9cTw_J_MjCGJu094x71cilfepX5V9ui1Cm_5fKg6Qy5TTAgP" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>
+    
+
+
+           </div>
+
+
+           <div class="col-md-4">
+                <div class="sticky-top">
+             
+
+            <p class="h5 text-start mt-6">[預購] 跳舞的蝴蝶結戒指 <br>
+              Dancing Bow Earring</p>
+
+
+          <!-- add love button -->
+          <div class="d-flex flex-nowrap justify-content-between align-items-center w-100">
+
+          
+          <p class="h8 mt-3">NT $450</p>
+          <button id="swapLove" class="btn btn-light showLove">
+          <span class="bi bi-heart"></span> 加入收藏
+          </button>
+       
+
+           </div>
+           <!-- Default dropup button -->
+           <!-- 下選項 -->
+           <div class="dropdown">
+
+            <button class="w-100 btn my-3 btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                 挑選戒圍
+            </button>
+            <ul class="dropdown-menu set-size text-center" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">國際圍4 —— 內圈4.08cm</a></li>
+              <li><a class="dropdown-item" href="#">國際圍5 —— 內圈4.24cm</a></li>
+              <li><a class="dropdown-item" href="#">國際圍6 —— 內圈4.40cm</a></li>
+            </ul>
+
+          </div>
+
+
+           <!--商品計數按鈕 -->
+            <div class="touchspin d-flex align-items-center gap-2">
+              <button class="btn btn-secondary" type="button" data-touchspin-down>-</button>
+              <input type="number" value="1" max="10" min="1" class="form-control text-center" data-touchspin-input>
+              <button class="btn btn-secondary" type="button" data-touchspin-up>+</button>
+            </div>
+            
+            <script>
+            new InputTouchspin(document.querySelector('.touchspin'))
+            </script>
+      
+
+            <!--加入購物車按鈕 -->  
+            <div class="btn-group d-flex my-3" >
+            <button type="button" class="btn btn-dark btn-lg">加入購物車</button>
+            </div>
+
+            <br>
+
+               <ul class="list-unstyled">
+                <li class="text-center mb-2">18K Intense Color Star Halo Sapphire Ring</li>
+                <li><p class="noto">在珠寶界，藍寶石被視為9月的誕生石，代表著智慧、平靜以及信仰的象徵。
+                  每一顆寶石都展現深邃的藍色，宛如湛藍的海洋，瀰漫出寧靜而神秘氛圍</p></li>
+                <li><br></li>
+                <hr>
+                <li class="text-center mb-2"><p class="noto">｜材質｜</p></li>
+                <li><p class="noto">這款戒指採用18K金材質，搭配著8顆藍寶石，總重達2.65克拉。</p></li>
+                <li><br></li>
+                <li class="text-center mb-2"><p class="noto">｜尺寸｜</p></li>
+                <li><p class="noto">我們提供國際通用的戒圍尺寸，從 #7 到 #15，您可以根據需要進行訂製。在下單時，請在訂單備註中註明所需尺寸。</p></li>
+                <li><br></li>
+                <li class="text-center mb-2"><p class="noto">｜風格與保養｜</p></li>
+                <li><p class="noto">在不佩戴時，請將戒指密封存放，保持乾爽。
+                  如出現輕微氧化，您可以使用拭銀布輕輕擦拭，
+                  使表面重現光澤。
+                  請避免與化學藥劑、溫泉、香水、化妝品以及尖銳物品接觸，以免造成損害。
+                  我們為您提供商品終身的維修保養服務，
+                  更多詳情請參閱購買須知。</p></li>
+                <li><br></li>
+                <hr>
+                <li class="text-center mb-2"><p class="noto">｜購買前的注意事項｜</p></li>
+                <li><p class="noto">在您下單前，請務必注意以下事項：（在此處提供購買前需注意的相關事項。）</p></li>
+                <li><br></li>
+               </ul>
+
+                </div>
+          </div>
+     </div>
+</div>
+
+</div>
+
+
+
+    <!--card 按鈕列 -->  
+
+ <div class="container">
+
+       <div class="row row-cols-2 row-cols-lg-4">
+
+        <div class="col mb-4">
+          <div class="card text-white h-100">
+            <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&q=80&w=3688&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+             class=rounded-1 card-img-top object-fit-cover h-100" alt="...">
+            <div class="card-img-overlay">
+              <div  class="btn btn-test">
+                <p>項鍊</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col mb-4">
+          <div class="card text-white h-100">
+            <img src="https://images.unsplash.com/photo-1599458349289-18f0ee82e6ed?auto=format&fit=crop&q=80&w=2592&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+             class="rounded-1 card-img-top object-fit-cover h-100" alt="...">
+            <div class="card-img-overlay">
+              <div  class="btn btn-test">
+                <p>戒指</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col mb-4">
+          <div class="card text-white h-100">
+            <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&q=80&w=3735&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+             class="rounded-1 card-img-top object-fit-cover h-100" alt="...">
+            <div class="card-img-overlay">
+              <div  class="btn btn-test">
+                <p>手鍊</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col mb-4">
+          <div class="card text-white h-100">
+            <img src="https://images.unsplash.com/photo-1606765729244-23fbdd754dd9?auto=format&fit=crop&q=80&w=2848&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+             class="rounded-1 card-img-top object-fit-cover h-100" alt="...">
+            <div class="card-img-overlay">
+              <div  class="btn btn-test">
+                <p>配件套組</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+ </div>
+
+</div>
+
+
+    <!--跑馬燈 -->  
+
+
+
+    <!--跑馬燈 --> 
+    <div class="marquee">
+  
+
+      <div class="marquee-container">
+        <div class="marquee-content">
+          <h6>
+      全館滿千送百&nbsp; 單件5折 &nbsp; &nbsp; &nbsp;
+      全館滿千送百&nbsp; 單件5折 &nbsp; &nbsp; &nbsp;
+      全館滿千送百&nbsp; 單件5折 &nbsp; &nbsp; &nbsp;
+          </h6>  
+        </div>
+        <div class="marquee-content2">
+          <h6>
+      全館滿千送百&nbsp; 單件5折 &nbsp; &nbsp; &nbsp;
+      全館滿千送百&nbsp; 單件5折 &nbsp; &nbsp; &nbsp;
+      全館滿千送百&nbsp; 單件5折 &nbsp; &nbsp; &nbsp;
+          </h6> 
+        </div>
+        <div class="marquee-content3">
+          <h6>
+      全館滿千送百&nbsp; 單件5折 &nbsp; &nbsp; &nbsp;
+      全館滿千送百&nbsp; 單件5折 &nbsp; &nbsp; &nbsp;
+      全館滿千送百&nbsp; 單件5折 &nbsp; &nbsp; &nbsp;
+          </h6> 
+        </div>
+          <div class="marquee-content4">
+          <h6>
+      全館滿千送百&nbsp; 單件5折 &nbsp; &nbsp; &nbsp;
+      全館滿千送百&nbsp; 單件5折 &nbsp; &nbsp; &nbsp;
+      全館滿千送百&nbsp; 單件5折 &nbsp; &nbsp; &nbsp;
+          </h6> 
+        </div>
+      </div>
+        
+       
+       </div>
+
+
+    <!--card 商品列 -->  
+    <div class="bg-light p-md-5 py-5 m-md-5">
+      <div class="container">
+      <h2 class="display-4 text-center mb-4">
+      我的珠寶系列
+      </h2>
+      
+      <div class="row row-cols-2 row-cols-lg-4 g-4">
+      
+        <div class="col mb-4">
+          <div class="card row g-0 flex-column">
+             <div class="col">
+               <img 
+               class="card-img-top object-fit-cover img-fluid set-size" src="https://plus.unsplash.com/premium_photo-1671641737553-3d669dc1f927?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mzh8QW8xN1oxVF9tNnN8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="...">
+               <div class="card-body text-center">
+                 <h5 class="card-title">NT $400</h5>
+                 <p class="card-text">[預購] [純銀] 跳舞的蝴蝶結耳環 / Dancing Bow Earring</p>
+                 <button type="button" class="btn btn-dark">加入購物車</button>
+               </div>
+             </div>
+      
+          </div>
+      
+        </div>
+      
+        <div class="col mb-4">
+          <div class="card row g-0 flex-column">
+             <div class="col">
+               <img 
+               class="card-img-top object-fit-cover img-fluid set-size" src="https://images.unsplash.com/photo-1660484660549-43cc223b1c9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NjN8QW8xN1oxVF9tNnN8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="...">
+               <div class="card-body text-center">
+                 <h5 class="card-title">NT $400</h5>
+                 <p class="card-text">[預購] [純銀] 跳舞的蝴蝶結耳環 / Dancing Bow Earring</p>
+                 <button type="button" class="btn btn-dark">加入購物車</button>
+               </div>
+             </div>
+      
+          </div>
+      
+        </div>
+      
+        <div class="col mb-4">
+          <div class="card row g-0 flex-column ">
+             <div class="col">
+               <img 
+               class="card-img-top object-fit-cover img-fluid set-size" src="https://images.unsplash.com/photo-1589326078697-b1be911ee9a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" alt="...">
+               <div class="card-body text-center">
+                 <h5 class="card-title">NT $400</h5>
+                 <p class="card-text">[預購] [純銀] 跳舞的蝴蝶結耳環 / Dancing Bow Earring</p>
+                 <button type="button" class="btn btn-dark">加入購物車</button>
+               </div>
+             </div>
+      
+          </div>
+      
+        </div>
+        
+        <div class="col mb-4">
+               <div class="card row g-0 flex-column ">
+                  <div class="col">
+                    <img 
+                    class="card-img-top object-fit-cover img-fluid set-size" src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3435&q=80" alt="...">
+                    <div class="card-body text-center">
+                      <h5 class="card-title">NT $400</h5>
+                      <p class="card-text">[預購] [純銀] 跳舞的蝴蝶結耳環 / Dancing Bow Earring</p>
+                      <button type="button" class="btn btn-dark">加入購物車</button>
+                    </div>
+                  </div>
+      
+               </div>
+      
+        </div>
+      
+      
+      
+        <div class="col mb-4">
+          <div class="card row g-0 flex-column ">
+             <div class="col">
+               <img 
+               class="card-img-top object-fit-cover img-fluid set-size" src="https://plus.unsplash.com/premium_photo-1681276170021-2d1bc52e51e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80" alt="...">
+               <div class="card-body text-center">
+                 <h5 class="card-title">NT $400</h5>
+                 <p class="card-text">[預購] [純銀] 跳舞的蝴蝶結耳環 / Dancing Bow Earring</p>
+                 <button type="button" class="btn btn-dark">加入購物車</button>
+               </div>
+             </div>
+      
+          </div>
+      
+        </div>
+      
+        <div class="col mb-4">
+          <div class="card row g-0 flex-column ">
+             <div class="col">
+               <img 
+               class="card-img-top object-fit-cover img-fluid set-size" src="https://images.unsplash.com/photo-1590166223826-12dee1677420?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2592&q=80" alt="...">
+               <div class="card-body text-center">
+                 <h5 class="card-title">NT $400</h5>
+                 <p class="card-text">[預購] [純銀] 跳舞的蝴蝶結耳環 / Dancing Bow Earring</p>
+                 <button type="button" class="btn btn-dark">加入購物車</button>
+               </div>
+             </div>
+      
+          </div>
+      
+        </div>
+      
+        <div class="col mb-4">
+          <div class="card row g-0 flex-column">
+             <div class="col">
+               <img 
+               class="card-img-top object-fit-cover img-fluid set-size" src="https://images.unsplash.com/photo-1590548784585-643d2b9f2925?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3464&q=80" alt="...">
+               <div class="card-body text-center">
+                 <h5 class="card-title">NT $400</h5>
+                 <p class="card-text">[預購] [純銀] 跳舞的蝴蝶結耳環 / Dancing Bow Earring</p>
+                 <button type="button" class="btn btn-dark">加入購物車</button>
+               </div>
+             </div>
+      
+          </div>
+      
+        </div>
+      
+        <div class="col mb-4">
+          <div class="card row g-0 flex-column">
+             <div class="col">
+               <img 
+               class="card-img-top object-fit-cover img-fluid set-size" src="https://images.unsplash.com/photo-1584811644165-33db3b146db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=800&q=60" alt="...">
+               <div class="card-body text-center">
+                 <h5 class="card-title">NT $400</h5>
+                 <p class="card-text">[預購] [純銀] 跳舞的蝴蝶結耳環 / Dancing Bow Earring</p>
+                 <button type="button" class="btn btn-dark">加入購物車</button>
+               </div>
+             </div>
+      
+          </div>
+      
+        </div>  
+      </div>
+      </div>
+      
+      </div>
+
+
+      <footer class="bg p-5">
+        <div class="container">
+        <ul class="list-unstyled d-flex d-md-flex justify-content-center text-center ">
+        <li><a class="text-nowrap nav-link link-light text-link" href="#">關於品牌</a></li>
+        <li><a class="text-nowrap nav-link link-light text-link" test-linkhref="#">購物須知</a></li>
+        <li><a class="text-nowrap nav-link link-light text-link" href="#">退貨流程</a></li>
+        <li><a class="text-nowrap nav-link link-light text-link" href="#">版權聲明</a></li>
+        <li><a class="text-nowrap nav-link link-light text-link" href="#">聯絡客服</a></li>
+        
+        </ul>
+        </div>
+        
+        </footer>
+
+
+</body>
+
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+
+
+</html>

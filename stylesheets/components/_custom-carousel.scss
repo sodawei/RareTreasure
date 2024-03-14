@@ -1,0 +1,29 @@
+
+
+/*carousel-inner*/
+
+.carousel-item{
+   background-position: center center;
+   background-size: cover;
+}
+
+.carousel-inner {
+   position: relative;
+   width: 100%;
+   overflow: hidden;
+}
+
+
+
+/*carousel 照片裁切中央*/
+
+.carousel .carousel-item {
+   height: 450px;
+ }
+ 
+.carousel .carousel-item img {
+   min-height: 450px;
+   max-height: 450px;
+   object-fit: cover;
+ }
+

@@ -1,0 +1,95 @@
+//變數
+$brand-color: #a08e6d;
+$similar-color:#805403;
+$font-color:#fff;
+$bl-color:black;
+$font-l:24px;
+$font-m:18px;
+$font-s:14px;
+
+
+/*nav改色*/
+
+.navbar,
+.offcanvas-body,
+.offcanvas-header{
+    background-color:$brand-color; 
+}
+
+
+/*選字白*/
+.navbar-text,
+.navbar-brand,
+.nav-link,
+.offcanvas-title{
+    color:$font-color;
+}
+
+
+
+
+
+
+/*點擊*/
+.nav-link:hover{
+    color:$bl-color;
+    background-color:$brand-color;    
+}
+
+.nav-link:focus, .nav-link:hover {
+    color:$bl-color;
+}
+
+.navbar-brand:hover{
+    color:$font-color;
+}
+
+.navbar-toggler{
+    border: 1px solid $font-color;
+}
+
+/*漢堡icon*/
+
+.material-symbols-outlined{
+    color:$font-color ;
+}
+
+.navbar-toggler:focus{
+    box-shadow: 0 0 0 0rem;
+}
+
+.navbar-brand:hover{
+    color:$font-color;    
+}
+
+/*下拉選單*/
+.dropdown-menu,
+.dropdown-item{
+    background-color:$font-color; 
+}
+
+
+/*內部細項*/
+
+.dropdown-item:focus{
+    background-color:$similar-color; 
+}
+
+.dropdown-item:hover{
+    color:$font-color;    
+    background-color:#291b00; 
+}
+
+/*點擊過後變色*/
+*, ::before, ::after {
+    --tw-ring-color: #0565fe80;   
+}
+
+
+
+/*搜尋按鈕*/
+.btn-outline-success {
+    color: $font-color; 
+    border-color: $font-color; 
+}
+
